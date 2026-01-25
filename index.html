@@ -28,7 +28,7 @@
         <h4 class="section-header">Informations Générales</h4>
         
         <div class="mb-3 question-box">
-            <label class="form-label fw-bold">Q1: Établissement public de santé actuel :</label>
+            <label class="form-label fw-bold">Q1: Dans le cadre de cette enquête, pourriez-vous s’il vous plait nous préciser l’établissement public de santé (l’hôpital ou la structure) dans lequel vous exercez actuellement votre fonction de sage-femme ?</label>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="hopital" value="CHU_IBN_BADIS" required>
                 <label class="form-check-label">Salle d'accouchement CHU IBN BADIS</label>
@@ -44,7 +44,7 @@
         </div>
 
         <div class="mb-3 question-box">
-            <label class="form-label fw-bold">Q2: Années d'expérience :</label>
+            <label class="form-label fw-bold">Q2: Combien d’années d’expérience avez-vous dans le domaine de sage-femme ?</label>
             <select class="form-select" name="experience" required>
                 <option value="" disabled selected>Sélectionnez une option</option>
                 <option value="moins_5">Moins de 5 ans</option>
@@ -54,106 +54,105 @@
         </div>
 
         <div class="mb-3 question-box">
-            <label class="form-label fw-bold">Q3: Avez-vous des problèmes de santé chroniques gênant votre exercice ?</label>
+            <label class="form-label fw-bold">Q3: Portez-vous des problèmes de sante chroniques qui gênent votre exercice ?</label>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="sante_chronique" value="non" checked onclick="toggleDisplay('preciser_sante', false)">
-                <label class="form-check-label">Non</label>
+                <label class="form-check-label">Oui</label>
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="sante_chronique" value="oui" onclick="toggleDisplay('preciser_sante', true)">
-                <label class="form-check-label">Oui</label>
+                <label class="form-check-label">Non</label>
             </div>
             <div class="mt-2" id="preciser_sante" style="display:none;">
                 <input type="text" class="form-control" name="precision_sante" placeholder="Si oui, précisez :">
             </div>
         </div>
 
-        <h4 class="section-header">Axe 01: Technicité</h4>
+        <h4 class="section-header">Axe: Technicité</h4>
 
         <div class="mb-3 question-box">
-            <label class="form-label fw-bold">Q4: L'installation de la parturiente dans une position adéquate est-elle facile même avec une table défectueuse ?</label>
+            <label class="form-label fw-bold">Q4: Trouvez-vous facile l’installation d’une parturiente dans une position adéquate sur une table gynécologique désadaptée ?</label>
             <div>
-                <input type="radio" name="axe1_q1" value="non" required> Non 
-                <input type="radio" name="axe1_q1" value="oui" class="ms-3" required> Oui
+                <input type="radio" name="axe1_q1" value="non" required> Oui
+                <input type="radio" name="axe1_q1" value="oui" class="ms-3" required> Non
             </div>
             <textarea class="form-control mt-2" name="pourquoi_axe1_q1" placeholder="Si non, dites pourquoi :"></textarea>
         </div>
 
         <div class="mb-3 question-box">
-            <label class="form-label fw-bold">Q5: Dans votre exercice, trouvez-vous le réglage facile ?</label>
+            <label class="form-label fw-bold">Q5: Dans votre exercice, trouvez-vous des facilites pour le réglage de la table gynécologique ?</label>
             <div>
-                <input type="radio" name="axe1_q2" value="non" required> Non 
-                <input type="radio" name="axe1_q2" value="oui" class="ms-3" required> Oui
+                <input type="radio" name="axe1_q2" value="non" required> Oui 
+                <input type="radio" name="axe1_q2" value="oui" class="ms-3" required> Non
             </div>
         </div>
 
         <div class="mb-3 question-box">
-            <label class="form-label fw-bold">Q6: Lors d'accouchement, vous mettez-vous toujours dans des postures confortables ?</label>
+            <label class="form-label fw-bold">Q6: lors des accouchements, vous vous mettez facilement dans des postures confortables ?</label>
             <div>
-                <input type="radio" name="axe1_q3" value="non" required> Non 
-                <input type="radio" name="axe1_q3" value="oui" class="ms-3" required> Oui
+                <input type="radio" name="axe1_q3" value="non" required> Oui 
+                <input type="radio" name="axe1_q3" value="oui" class="ms-3" required> Non 
             </div>
             <textarea class="form-control mt-2" name="pourquoi_axe1_q3" placeholder="Si non, dites pourquoi :"></textarea>
         </div>
 
-        <h4 class="section-header">Axe 02: Psychologique</h4>
+        <h4 class="section-header">Axe: Psychologique</h4>
 
         <div class="mb-3 question-box">
-            <label class="form-label fw-bold">Q7: Arrivez-vous à gérer votre stress/anxiété avec une table défectueuse ?</label>
+            <label class="form-label fw-bold">Q7: Arrivez-vous à gérer votre stress avec une table gynécologiques défectueuse ?</label>
             <div>
-                <input type="radio" name="axe2_q1" value="non" required> Non 
-                <input type="radio" name="axe2_q1" value="oui" class="ms-3" required> Oui
+                <input type="radio" name="axe2_q1" value="non" required> Oui 
+                <input type="radio" name="axe2_q1" value="oui" class="ms-3" required> Non
             </div>
         </div>
 
         <div class="mb-3 question-box">
-            <label class="form-label fw-bold">Q8: Les pannes de la table ne vous font-elles pas perdre un temps précieux ?</label>
+            <label class="form-label fw-bold">Q8: Arrivez-vous à gérer votre temps avec des tables gynécologiques défiantes ? </label>
             <div>
-                <input type="radio" name="axe2_q2" value="non" required> Non 
-                <input type="radio" name="axe2_q2" value="oui" class="ms-3" required> Oui
+                <input type="radio" name="axe2_q2" value="non" required> Oui 
+                <input type="radio" name="axe2_q2" value="oui" class="ms-3" required> Non
             </div>
         </div>
 
         <div class="mb-3 question-box">
-            <label class="form-label fw-bold">Q9: La communication avec les parturientes est-elle perturbée à cause de la table ?</label>
+            <label class="form-label fw-bold">Q9: Dans votre exercice, la communication avec les parturientes n’est pas perturbée à cause de la table gynécologique défectueuse ?</label>
             <div>
-                <input type="radio" name="axe2_q3" value="non" required> Non 
-                <input type="radio" name="axe2_q3" value="oui" class="ms-3" required> Oui
+                <input type="radio" name="axe2_q3" value="non" required> Oui 
+                <input type="radio" name="axe2_q3" value="oui" class="ms-3" required> Non
             </div>
         </div>
 
-        <h4 class="section-header">Axe 03: Risque</h4>
+        <h4 class="section-header">Axe: Risque</h4>
 
         <div class="mb-3 question-box">
-            <label class="form-label fw-bold">Q10: Arrivez-vous à gérer l'hygiène avec des tables présentant des déchirures ?</label>
+            <label class="form-label fw-bold">Q10: Est-ce que vous arrivez à exercer votre travail sur le plan hygiénique avec des tables gynécologiques défiantes ?</label>
             <div>
-                <input type="radio" name="axe3_q1" value="non" required> Non 
-                <input type="radio" name="axe3_q1" value="oui" class="ms-3" required> Oui
-            </div>
-        </div>
-
-        <div class="mb-3 question-box">
-            <label class="form-label fw-bold">Q11: Evitez-vous toujours le risque de chute dû à l'instabilité de la table ?</label>
-            <div>
-                <input type="radio" name="axe3_q2" value="non" required> Non 
-                <input type="radio" name="axe3_q2" value="oui" class="ms-3" required> Oui
+                <input type="radio" name="axe3_q1" value="non" required> Oui 
+                <input type="radio" name="axe3_q1" value="oui" class="ms-3" required> Non
             </div>
         </div>
 
         <div class="mb-3 question-box">
-            <label class="form-label fw-bold">Q12: Après votre durée d'exercice, vous ne présentez pas de problèmes de santé physique ?</label>
+            <label class="form-label fw-bold">Q11: Vous évitez toujours le risque de chute ou glissade de la femme ou du nouveau-né au raison de l’instabilité de la table gynécologique ?</label>
             <div>
-                <input type="radio" name="axe3_q3" value="non" required> Non 
-                <input type="radio" name="axe3_q3" value="oui" class="ms-3" required> Oui
+                <input type="radio" name="axe3_q2" value="non" required> Oui 
+                <input type="radio" name="axe3_q2" value="oui" class="ms-3" required> Non
             </div>
-            <textarea class="form-control mt-2" name="precision_sante_physique" placeholder="Si non (إذا كانت الإجابة 'Oui' أي 'أنا أعاني من مشاكل')، قل ما هي :"></textarea>
         </div>
 
         <div class="mb-3 question-box">
-            <label class="form-label fw-bold">Q13: Arrivez-كم à éviter les fautes professionnelles malgré les difficultés ergonomiques ?</label>
+            <label class="form-label fw-bold">Q12: Àpres votre exercice journalier, vous ne présentez pas des problèmes de santé physique ?</label>
             <div>
-                <input type="radio" name="axe3_q4" value="non" required> Non 
-                <input type="radio" name="axe3_q4" value="oui" class="ms-3" required> Oui
+                <input type="radio" name="axe3_q3" value="non" required> Oui 
+                <input type="radio" name="axe3_q3" value="oui" class="ms-3" required> Non
+            </div>
+        </div>
+
+        <div class="mb-3 question-box">
+            <label class="form-label fw-bold">Q13: Dans votre exercice, arrivez-vous à éviter les fautes professionnelles malgré les difficultés sur le plan ergonomique ?</label>
+            <div>
+                <input type="radio" name="axe3_q4" value="non" required> Oui 
+                <input type="radio" name="axe3_q4" value="oui" class="ms-3" required> Non
             </div>
             <textarea class="form-control mt-2" name="fautes_rencontrees" placeholder="Si non, quelles sont les fautes rencontrées ?"></textarea>
         </div>
@@ -164,7 +163,7 @@
 
     </form>
     <div class="mt-4 text-center text-muted small">
-        &copy; 2024 - Enquête Mémoire Fin d'Études
+        &copy; 2026 - Enquête Mémoire Fin d'Études
     </div>
 </div>
 
