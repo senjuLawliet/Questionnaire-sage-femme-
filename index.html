@@ -3,93 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questionnaire Sage-femme</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body { background-color: #f8f9fa; padding: 20px; }
-        .container { background: white; padding: 30px; border-radius: 10px; shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h2 { color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 10px; margin-bottom: 30px; }
-        .question-title { font-weight: bold; margin-bottom: 10px; }
-        .form-check { margin-bottom: 8px; }
-    </style>
+    <title>Enquête - Impact de dysfonctionnement des TG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-50 py-10 px-4">
 
-<div class="container mt-5 mb-5 shadow-sm">
-    <h2 class="text-center">Questionnaire destiné aux sages-femmes</h2>
-    
-    <form>
-        <div class="mb-4">
-            <p class="question-title">1. Votre âge :</p>
-            <input type="number" class="form-control" name="q1">
+    <div class="max-w-3xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="bg-blue-600 p-6 text-white text-center">
+            [span_0](start_span)<h1 class="text-xl font-bold uppercase tracking-wide">ANNEXES[span_0](end_span)</h1>
+            [span_1](start_span)<h2 class="text-2xl font-semibold mt-2">Le questionnaire De pré-enquête[span_1](end_span)</h2>
         </div>
 
-        <div class="mb-4">
-            <p class="question-title">2. Années d'expérience :</p>
-            <input type="number" class="form-control" name="q2">
-        </div>
+        <div class="p-8">
+            <p class="text-gray-700 leading-relaxed mb-6">
+                [span_2](start_span)Dans le cadre de notre mémoire de fin d'études, nous réalisons une enquête sur l'impact des dysfonctionnements des tables gynécologiques sur la qualité des soins et la santé de la sage-femme.[span_2](end_span) 
+                [span_3](start_span)Nous vous prions de bien vouloir répondre à ce questionnaire anonyme.[span_3](end_span) 
+                Votre expérience est précieuse pour mettre en lumière vos conditions de travail réelles. [span_4](start_span)Merci de votre collaboration.[span_4](end_span)
+            </p>
 
-        <div class="mb-4">
-            <p class="question-title">5. Quel est votre lieu d'exercice actuel ?</p>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="q5" id="q5_1" value="CHU">
-                <label class="form-check-label" for="q5_1">CHU / EHS</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="q5" id="q5_2" value="EPH">
-                <label class="form-check-label" for="q5_2">EPH</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="q5" id="q5_3" value="EPSP">
-                <label class="form-check-label" for="q5_3">EPSP (Polyclinique / Salle d'accouchement)</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="q5" id="q5_4" value="Privé">
-                <label class="form-check-label" for="q5_4">Secteur privé</label>
-            </div>
-            <div class="mt-2">
-                <label class="form-label" for="q5_text">Si non, dites pourquoi :</label>
-                <input type="text" class="form-control" name="q5_precision" id="q5_text">
-            </div>
-        </div>
+            <form action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="POST" class="space-y-8">
+                
+                <div class="space-y-4">
+                    [span_5](start_span)<label class="block font-bold text-gray-800">Question 01: Dans le cadre de cette enquête, pourriez-vous s'il vous plait nous préciser l'établissement public de santé (l'hôpital ou la structure) dans lequel vous exercez actuellement votre fonction de sage-femme?[span_5](end_span)</label>
+                    <div class="space-y-2">
+                        <label class="flex items-center space-x-3">
+                            <input type="radio" name="etablissement" value="CHU IBN BADIS" class="h-4 w-4 text-blue-600" required>
+                            [span_6](start_span)<span>Salle d'accouchement CHU IBN BADIS[span_6](end_span)</span>
+                        </label>
+                        <label class="flex items-center space-x-3">
+                            <input type="radio" name="etablissement" value="EHS SIDI MABROUK" class="h-4 w-4 text-blue-600">
+                            [span_7](start_span)<span>Salle d'accouchement EHS Mère Enfant SIDI MABROUK[span_7](end_span)</span>
+                        </label>
+                        <label class="flex items-center space-x-3">
+                            <input type="radio" name="etablissement" value="EPH Nouvelle Ville" class="h-4 w-4 text-blue-600">
+                            [span_8](start_span)<span>Salle d'accouchement EPH Nouvelle Ville[span_8](end_span)</span>
+                        </label>
+                    </div>
+                </div>
 
-        <div class="mb-4">
-            <p class="question-title">12. Quelles sont les principales difficultés rencontrées ?</p>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="q12[]" id="q12_1" value="charge">
-                <label class="form-check-label" for="q12_1">Charge de travail élevée</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="q12[]" id="q12_2" value="manque_moyens">
-                <label class="form-check-label" for="q12_2">Manque de moyens matériels</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="q12[]" id="q12_3" value="formation">
-                <label class="form-check-label" for="q12_3">Manque de formation continue</label>
-            </div>
-            <div class="mt-2">
-                <label class="form-label" for="q12_text">Si non, dites les quelles:</label>
-                <input type="text" class="form-control" name="q12_precision" id="q12_text">
-            </div>
-        </div>
+                <div class="space-y-4">
+                    [span_9](start_span)<label class="block font-bold text-gray-800">Question 02: Combien d'années d'expérience avez-vous dans le domaine de sage-femme?[span_9](end_span)</label>
+                    <div class="space-y-2">
+                        <label class="flex items-center space-x-3">
+                            <input type="radio" name="experience" value="Moins de 5 ans" class="h-4 w-4 text-blue-600" required>
+                            [span_10](start_span)<span>Moins de 5 ans[span_10](end_span)</span>
+                        </label>
+                        <label class="flex items-center space-x-3">
+                            <input type="radio" name="experience" value="De 05 à 10 ans" class="h-4 w-4 text-blue-600">
+                            [span_11](start_span)<span>De 05 à 10 ans[span_11](end_span)</span>
+                        </label>
+                        <label class="flex items-center space-x-3">
+                            <input type="radio" name="experience" value="Plus de 10 ans" class="h-4 w-4 text-blue-600">
+                            [span_12](start_span)<span>Plus de 10 ans[span_12](end_span)</span>
+                        </label>
+                    </div>
+                </div>
 
-        <div class="mb-4">
-            <p class="question-title">13. Pensez-vous que cette approche est bénéfique ?</p>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="q13" id="q13_yes" value="Oui">
-                <label class="form-check-label" for="q13_yes">Oui</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="q13" id="q13_no" value="Non">
-                <label class="form-check-label" for="q13_no">Non</label>
-            </div>
-            </div>
+                <div class="space-y-4 border-b pb-6">
+                    [span_13](start_span)<label class="block font-bold text-gray-800">Question 03: Portez-vous des problèmes de sante chroniques qui gênent votre exercice?[span_13](end_span)</label>
+                    <div class="flex space-x-6">
+                        [span_14](start_span)<label class="flex items-center space-x-2"><input type="radio" name="sante_chronique" value="Oui" required> <span>Oui[span_14](end_span)</span></label>
+                        [span_15](start_span)<label class="flex items-center space-x-2"><input type="radio" name="sante_chronique" value="Non"> <span>Non[span_15](end_span)</span></label>
+                    </div>
+                    <input type="text" name="sante_chronique_detail" placeholder="Si oui, précisez :" class="w-full border-b border-gray-300 p-2 focus:border-blue-500 outline-none">
+                </div>
 
-        <div class="text-center mt-5">
-            <button type="submit" class="btn btn-primary btn-lg">Envoyer les réponses</button>
+                <div class="space-y-6">
+                    [span_16](start_span)<h3 class="text-lg font-bold text-blue-700 border-l-4 border-blue-700 pl-2 uppercase">Axe: Technicité[span_16](end_span)</h3>
+                    
+                    <div class="space-y-3">
+                        [span_17](start_span)<label class="block font-medium">Question 04: Trouvez-vous facile l'installation d'une parturiente dans une position adéquate sur une table gynécologique désadaptée ?[span_17](end_span)</label>
+                        <div class="flex space-x-6">
+                            [span_18](start_span)<label class="flex items-center space-x-2"><input type="radio" name="q4_installation" value="Oui" required> <span>Oui[span_18](end_span)</span></label>
+                            [span_19](start_span)<label class="flex items-center space-x-2"><input type="radio" name="q4_installation" value="Non"> <span>Non[span_19](end_span)</span></label>
+                        </div>
+                        <input type="text" name="q4_pourquoi" placeholder="Si non, dites pourquoi :" class="w-full border-b border-gray-300 p-2 focus:border-blue-500 outline-none">
+                    </div>
+
+                    <div class="space-y-3">
+                        [span_20](start_span)<label class="block font-medium">Question 05: Dans votre exercice, trouvez-vous des facilites pour le réglage de la table gynécologique ?[span_20](end_span)</label>
+                        <div class="flex space-x-6">
+                            [span_21](start_span)<label class="flex items-center space-x-2"><input type="radio" name="q5_reglage" value="Oui" required> <span>Oui[span_21](end_span)</span></label>
+                            [span_22](start_span)<label class="flex items-center space-x-2"><input type="radio" name="q5_reglage" value="Non"> <span>Non[span_22](end_span)</span></label>
+                        </div>
+                        <input type="text" name="q5_pourquoi" placeholder="Si non, dites pourquoi :" class="w-full border-b border-gray-300 p-2 focus:border-blue-500 outline-none">
+                    </div>
+
+                    <div class="space-y-3">
+                        [span_23](start_span)<label class="block font-medium">Question 06: lors des accouchements, vous vous mettez facilement dans des postures confortables ?[span_23](end_span)</label>
+                        <div class="flex space-x-6">
+                            [span_24](start_span)<label class="flex items-center space-x-2"><input type="radio" name="q6_posture" value="Oui" required> <span>Oui[span_24](end_span)</span></label>
+                            [span_25](start_span)<label class="flex items-center space-x-2"><input type="radio" name="q6_posture" value="Non"> <span>Non[span_25](end_span)</span></label>
+                        </div>
+                        <input type="text" name="q6_pourquoi" placeholder="Si non, dites pourquoi :" class="w-full border-b border-gray-300 p-2 focus:border-blue-500 outline-none">
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    [span_26](start_span)<h3 class="text-lg font-bold text-blue-700 border-l-4 border-blue-700 pl-2 uppercase">Axe : Psychologique[span_26](end_span)</h3>
+                    
+                    <div class="space-y-3">
+                        [span_27](start_span)<label class="block font-medium">Question 07: Arrivez-vous à gérer votre stress avec une table gynécologiques défectueuse ?[span_27](end_span)</label>
+                        <div class="flex space-x-6">
+                            [span_28](start_span)<label class="flex items-center space-x-2"><input type="radio" name="q7_stress" value="Oui" required> <span>Oui[span_28](end_span)</span></label>
+                            [span_29](start_span)<label class="flex items-center space-x-2"><input type="radio" name="q7_stress" value="Non"> <span>Non[span_29](end_span)</span></label>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        [span_30](start_span)<label class="block font-medium">Question 08: Arrivez-vous à gérer votre temps avec des tables gynécologiques défiantes ?[span_30](end_span)</label>
+                        <div class="flex space-x-6">
+                            [span_31](start_span)<label class="flex items-center space-x-2"><input type="radio" name="q8_temps" value="Oui" required> <span>Oui[span_31](end_span)</span></label>
+                            [span_32](start_span)<label class="flex items-center space-x-2"><input type="radio" name="q8_temps" value="Non"> <span>Non[span_32](end_span)</span></label>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        [span_33](start_span)<label class="block font-medium">Question 09: Dans votre exercice, la communication avec les parturientes n'est pas perturbée à cause de la table gynécologique défectueuse?[span_33](end_span)</label>
+                        <div class="flex space-x-6">
+                            [span_34](start_span)<label class="flex items-center space-x-2"><input type="radio" name="q9_communication" value="Oui" required> <span>Oui[span_34](end_span)</span></label>
+                            [span_35](start_span)<label class="flex items-center space-x-2"><input type="radio" name="q9_communication" value="Non"> <span>Non[span_35](end_span)</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    [span_36](start_span)<h3 class="text-lg font-bold text-blue-700 border-l-4 border-blue-700 pl-2 uppercase">Axe: Risque[span_36](end_span)</h3>
+                    
+                    <div class="space-y-3">
+                        [span_37](start_span)<label class="block font-medium">Question 10: Est-ce que vous arrivez à exercer votre travail sur le plan hygiénique avec des tables gynécologiques défiantes ?[span_37](end_span)</label>
+                        <div class="flex space-x-6">
+                            [span_38](start_span)<label class="flex items-center space-x-2"><input type="radio" name="q10_hygiene" value="Oui" required> <span>Oui[span_38](end_span)</span></label>
+                            [span_39](start_span)<label class="flex items-center space-x-2"><input type="radio" name="q10_hygiene" value="Non"> <span>Non[span_39](end_span)</span></label>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        [span_40](start_span)<label class="block font-medium">Question 11: Vous évitez toujours le risque de chute ou glissade de la femme ou du nouveau-né au raison de l'instabilité de la table gynécologique ?[span_40](end_span)</label>
+                        <div class="flex space-x-6">
+                            [span_41](start_span)<label class="flex items-center space-x-2"><input type="radio" name="q11_risque_chute" value="Oui" required> <span>Oui[span_41](end_span)</span></label>
+                            [span_42](start_span)<label class="flex items-center space-x-2"><input type="radio" name="q11_risque_chute" value="Non"> <span>Non[span_42](end_span)</span></label>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        [span_43](start_span)<label class="block font-medium">Question 12: Apres votre exercice journalier, vous ne présentez pas des problèmes de santé physique ?[span_43](end_span)</label>
+                        <div class="flex space-x-6">
+                            [span_44](start_span)<label class="flex items-center space-x-2"><input type="radio" name="q12_sante_physique" value="Oui" required> <span>Oui[span_44](end_span)</span></label>
+                            [span_45](start_span)<label class="flex items-center space-x-2"><input type="radio" name="q12_sante_physique" value="Non"> <span>Non[span_45](end_span)</span></label>
+                        </div>
+                        <input type="text" name="q12_detail" placeholder="Si non, dites-les quelles :" class="w-full border-b border-gray-300 p-2 focus:border-blue-500 outline-none">
+                    </div>
+
+                    <div class="space-y-3">
+                        [span_46](start_span)<label class="block font-medium">Question 13: Dans votre exercice, arrivez-vous à éviter les fautes professionnelles malgré les difficultés sur le plan ergonomique ?[span_46](end_span)</label>
+                        <div class="flex space-x-6">
+                            [span_47](start_span)<label class="flex items-center space-x-2"><input type="radio" name="q13_fautes" value="Oui" required> <span>Oui[span_47](end_span)</span></label>
+                            [span_48](start_span)<label class="flex items-center space-x-2"><input type="radio" name="q13_fautes" value="Non"> <span>Non[span_48](end_span)</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-6">
+                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">ENVOYER LE QUESTIONNAIRE FINAL</button>
+                </div>
+
+            </form>
         </div>
-    </form>
-</div>
+    </div>
 
 </body>
 </html>
