@@ -52,7 +52,8 @@
             </p>
         </header>
 
-        <form id="surveyForm" class="space-y-6">
+        <!-- Formspree Integration: Put your endpoint URL in the 'action' attribute -->
+        <form id="surveyForm" action="https://formspree.io/f/xwvqbkog" method="POST" class="space-y-6">
             
             <!-- Informations Générales -->
             <div class="form-card p-6">
@@ -61,30 +62,30 @@
                 <div class="mb-6">
                     <p class="font-medium text-gray-700 mb-3">Question 01: Dans le cadre de cette enquête, pourriez-vous s'il vous plait nous préciser l'établissement public de santé (l'hôpital ou la structure) dans lequel vous exercez actuellement votre fonction de sage-femme?</p>
                     <div class="radio-group">
-                        <label><input type="radio" name="q1" value="CHU IBN BADIS" class="mr-2"> <span>Salle d'accouchement CHU IBN BADIS</span></label>
-                        <label><input type="radio" name="q1" value="EHS SIDI MABROUK" class="mr-2"> <span>Salle d'accouchement EHS Mère Enfant SIDI MABROUK</span></label>
-                        <label><input type="radio" name="q1" value="EPH Nouvelle Ville" class="mr-2"> <span>Salle d'accouchement EPH Nouvelle Ville</span></label>
+                        <label><input type="radio" name="01_Etablissement" value="CHU IBN BADIS" required class="mr-2"> <span>Salle d'accouchement CHU IBN BADIS</span></label>
+                        <label><input type="radio" name="01_Etablissement" value="EHS SIDI MABROUK" class="mr-2"> <span>Salle d'accouchement EHS Mère Enfant SIDI MABROUK</span></label>
+                        <label><input type="radio" name="01_Etablissement" value="EPH Nouvelle Ville" class="mr-2"> <span>Salle d'accouchement EPH Nouvelle Ville</span></label>
                     </div>
                 </div>
 
                 <div class="mb-6">
                     <p class="font-medium text-gray-700 mb-3">Question 02: Combien d'années d'expérience avez-vous dans le domaine de sage-femme?</p>
                     <div class="radio-group">
-                        <label><input type="radio" name="q2" value="Moins de 5 ans" class="mr-2"> <span>Moins de 5 ans</span></label>
-                        <label><input type="radio" name="q2" value="De 05 à 10 ans" class="mr-2"> <span>De 05 à 10 ans</span></label>
-                        <label><input type="radio" name="q2" value="Plus de 10 ans" class="mr-2"> <span>Plus de 10 ans</span></label>
+                        <label><input type="radio" name="02_Experience" value="Moins de 5 ans" required class="mr-2"> <span>Moins de 5 ans</span></label>
+                        <label><input type="radio" name="02_Experience" value="De 05 à 10 ans" class="mr-2"> <span>De 05 à 10 ans</span></label>
+                        <label><input type="radio" name="02_Experience" value="Plus de 10 ans" class="mr-2"> <span>Plus de 10 ans</span></label>
                     </div>
                 </div>
 
                 <div class="mb-2">
                     <p class="font-medium text-gray-700 mb-3">Question 03: Portez-vous des problèmes de sante chroniques qui gênent votre exercice?</p>
                     <div class="flex gap-4 mb-3">
-                        <label class="flex items-center"><input type="radio" name="q3" value="Oui" class="mr-2" onclick="toggleText(true, 'q3_details')"> Oui</label>
-                        <label class="flex items-center"><input type="radio" name="q3" value="Non" class="mr-2" onclick="toggleText(false, 'q3_details')"> Non</label>
+                        <label class="flex items-center"><input type="radio" name="03_Sante_Chronique" value="Oui" required class="mr-2" onclick="toggleText(true, 'q3_details')"> Oui</label>
+                        <label class="flex items-center"><input type="radio" name="03_Sante_Chronique" value="Non" class="mr-2" onclick="toggleText(false, 'q3_details')"> Non</label>
                     </div>
                     <div id="q3_details" class="hidden mt-2">
                         <label class="text-sm text-gray-600 mb-1 block">Si oui, précisez :</label>
-                        <input type="text" name="q3_text" class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-pink-400 outline-none">
+                        <input type="text" name="03_Sante_Details" class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-pink-400 outline-none">
                     </div>
                 </div>
             </div>
@@ -96,36 +97,36 @@
                 <div class="mb-6">
                     <p class="font-medium text-gray-700 mb-3">Question 04: Trouvez-vous facile l'installation d'une parturiente dans une position adéquate sur une table gynécologique désadaptée ?</p>
                     <div class="flex gap-4 mb-3">
-                        <label class="flex items-center"><input type="radio" name="q4" value="Oui" class="mr-2" onclick="toggleText(false, 'q4_details')"> Oui</label>
-                        <label class="flex items-center"><input type="radio" name="q4" value="Non" class="mr-2" onclick="toggleText(true, 'q4_details')"> Non</label>
+                        <label class="flex items-center"><input type="radio" name="04_Facilite_Installation" value="Oui" required class="mr-2" onclick="toggleText(false, 'q4_details')"> Oui</label>
+                        <label class="flex items-center"><input type="radio" name="04_Facilite_Installation" value="Non" class="mr-2" onclick="toggleText(true, 'q4_details')"> Non</label>
                     </div>
                     <div id="q4_details" class="hidden mt-2">
                         <label class="text-sm text-gray-600 mb-1 block">Si non, dites pourquoi :</label>
-                        <textarea name="q4_text" class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-pink-400 outline-none h-20"></textarea>
+                        <textarea name="04_Installation_Pourquoi" class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-pink-400 outline-none h-20"></textarea>
                     </div>
                 </div>
 
                 <div class="mb-6">
                     <p class="font-medium text-gray-700 mb-3">Question 05: Dans votre exercice, trouvez-vous des facilites pour le réglage de la table gynécologique ?</p>
                     <div class="flex gap-4 mb-3">
-                        <label class="flex items-center"><input type="radio" name="q5" value="Oui" class="mr-2" onclick="toggleText(false, 'q5_details')"> Oui</label>
-                        <label class="flex items-center"><input type="radio" name="q5" value="Non" class="mr-2" onclick="toggleText(true, 'q5_details')"> Non</label>
+                        <label class="flex items-center"><input type="radio" name="05_Facilite_Reglage" value="Oui" required class="mr-2" onclick="toggleText(false, 'q5_details')"> Oui</label>
+                        <label class="flex items-center"><input type="radio" name="05_Facilite_Reglage" value="Non" class="mr-2" onclick="toggleText(true, 'q5_details')"> Non</label>
                     </div>
                     <div id="q5_details" class="hidden mt-2">
                         <label class="text-sm text-gray-600 mb-1 block">Si non, dites pourquoi :</label>
-                        <textarea name="q5_text" class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-pink-400 outline-none h-20"></textarea>
+                        <textarea name="05_Reglage_Pourquoi" class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-pink-400 outline-none h-20"></textarea>
                     </div>
                 </div>
 
                 <div class="mb-2">
                     <p class="font-medium text-gray-700 mb-3">Question 06: lors des accouchements, vous vous mettez facilement dans des postures confortables ?</p>
                     <div class="flex gap-4 mb-3">
-                        <label class="flex items-center"><input type="radio" name="q6" value="Oui" class="mr-2" onclick="toggleText(false, 'q6_details')"> Oui</label>
-                        <label class="flex items-center"><input type="radio" name="q6" value="Non" class="mr-2" onclick="toggleText(true, 'q6_details')"> Non</label>
+                        <label class="flex items-center"><input type="radio" name="06_Postures_Confortables" value="Oui" required class="mr-2" onclick="toggleText(false, 'q6_details')"> Oui</label>
+                        <label class="flex items-center"><input type="radio" name="06_Postures_Confortables" value="Non" class="mr-2" onclick="toggleText(true, 'q6_details')"> Non</label>
                     </div>
                     <div id="q6_details" class="hidden mt-2">
                         <label class="text-sm text-gray-600 mb-1 block">Si non, dites pourquoi :</label>
-                        <textarea name="q6_text" class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-pink-400 outline-none h-20"></textarea>
+                        <textarea name="06_Postures_Pourquoi" class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-pink-400 outline-none h-20"></textarea>
                     </div>
                 </div>
             </div>
@@ -137,24 +138,24 @@
                 <div class="mb-6">
                     <p class="font-medium text-gray-700 mb-3">Question 07: Arrivez-vous à gérer votre stress avec une table gynécologiques défectueuse ?</p>
                     <div class="flex gap-4">
-                        <label class="flex items-center"><input type="radio" name="q7" value="Oui" class="mr-2"> Oui</label>
-                        <label class="flex items-center"><input type="radio" name="q7" value="Non" class="mr-2"> Non</label>
+                        <label class="flex items-center"><input type="radio" name="07_Gérer_Stress" value="Oui" required class="mr-2"> Oui</label>
+                        <label class="flex items-center"><input type="radio" name="07_Gérer_Stress" value="Non" class="mr-2"> Non</label>
                     </div>
                 </div>
 
                 <div class="mb-6">
                     <p class="font-medium text-gray-700 mb-3">Question 08: Arrivez-vous à gérer votre temps avec des tables gynécologiques défiantes ?</p>
                     <div class="flex gap-4">
-                        <label class="flex items-center"><input type="radio" name="q8" value="Oui" class="mr-2"> Oui</label>
-                        <label class="flex items-center"><input type="radio" name="q8" value="Non" class="mr-2"> Non</label>
+                        <label class="flex items-center"><input type="radio" name="08_Gérer_Temps" value="Oui" required class="mr-2"> Oui</label>
+                        <label class="flex items-center"><input type="radio" name="08_Gérer_Temps" value="Non" class="mr-2"> Non</label>
                     </div>
                 </div>
 
                 <div class="mb-2">
                     <p class="font-medium text-gray-700 mb-3">Question 09: Dans votre exercice, la communication avec les parturientes n'est pas perturbée à cause de la table gynécologique défectueuse?</p>
                     <div class="flex gap-4">
-                        <label class="flex items-center"><input type="radio" name="q9" value="Oui" class="mr-2"> Oui</label>
-                        <label class="flex items-center"><input type="radio" name="q9" value="Non" class="mr-2"> Non</label>
+                        <label class="flex items-center"><input type="radio" name="09_Communication" value="Oui" required class="mr-2"> Oui</label>
+                        <label class="flex items-center"><input type="radio" name="09_Communication" value="Non" class="mr-2"> Non</label>
                     </div>
                 </div>
             </div>
@@ -166,41 +167,44 @@
                 <div class="mb-6">
                     <p class="font-medium text-gray-700 mb-3">Question 10: Est-ce que vous arrivez à exercer votre travail sur le plan hygiénique avec des tables gynécologiques défiantes ?</p>
                     <div class="flex gap-4">
-                        <label class="flex items-center"><input type="radio" name="q10" value="Oui" class="mr-2"> Oui</label>
-                        <label class="flex items-center"><input type="radio" name="q10" value="Non" class="mr-2"> Non</label>
+                        <label class="flex items-center"><input type="radio" name="10_Hygiene" value="Oui" required class="mr-2"> Oui</label>
+                        <label class="flex items-center"><input type="radio" name="10_Hygiene" value="Non" class="mr-2"> Non</label>
                     </div>
                 </div>
 
                 <div class="mb-6">
                     <p class="font-medium text-gray-700 mb-3">Question 11: Vous évitez toujours le risque de chute ou glissade de la femme ou du nouveau-né au raison de l'instabilité de la table gynécologique ?</p>
                     <div class="flex gap-4">
-                        <label class="flex items-center"><input type="radio" name="q11" value="Oui" class="mr-2"> Oui</label>
-                        <label class="flex items-center"><input type="radio" name="q11" value="Non" class="mr-2"> Non</label>
+                        <label class="flex items-center"><input type="radio" name="11_Risque_Chute" value="Oui" required class="mr-2"> Oui</label>
+                        <label class="flex items-center"><input type="radio" name="11_Risque_Chute" value="Non" class="mr-2"> Non</label>
                     </div>
                 </div>
 
                 <div class="mb-6">
                     <p class="font-medium text-gray-700 mb-3">Question 12: Apres votre exercice journalier, vous ne présentez pas des problèmes de santé physique ?</p>
                     <div class="flex gap-4 mb-3">
-                        <label class="flex items-center"><input type="radio" name="q12" value="Oui" class="mr-2" onclick="toggleText(false, 'q12_details')"> Oui</label>
-                        <label class="flex items-center"><input type="radio" name="q12" value="Non" class="mr-2" onclick="toggleText(true, 'q12_details')"> Non</label>
+                        <label class="flex items-center"><input type="radio" name="12_Sante_Physique" value="Oui" required class="mr-2" onclick="toggleText(false, 'q12_details')"> Oui</label>
+                        <label class="flex items-center"><input type="radio" name="12_Sante_Physique" value="Non" class="mr-2" onclick="toggleText(true, 'q12_details')"> Non</label>
                     </div>
                     <div id="q12_details" class="hidden mt-2">
                         <label class="text-sm text-gray-600 mb-1 block">Si non, dites-les quelles :</label>
-                        <textarea name="q12_text" class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-pink-400 outline-none h-20"></textarea>
+                        <textarea name="12_Sante_Details" class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-pink-400 outline-none h-20"></textarea>
                     </div>
                 </div>
 
                 <div class="mb-2">
                     <p class="font-medium text-gray-700 mb-3">Question 13: Dans votre exercice, arrivez-vous à éviter les fautes professionnelles malgré les difficultés sur le plan ergonomique ?</p>
                     <div class="flex gap-4">
-                        <label class="flex items-center"><input type="radio" name="q13" value="Oui" class="mr-2"> Oui</label>
-                        <label class="flex items-center"><input type="radio" name="q13" value="Non" class="mr-2"> Non</label>
+                        <label class="flex items-center"><input type="radio" name="13_Fautes_Professionnelles" value="Oui" required class="mr-2"> Oui</label>
+                        <label class="flex items-center"><input type="radio" name="13_Fautes_Professionnelles" value="Non" class="mr-2"> Non</label>
                     </div>
                 </div>
             </div>
 
-            <button type="submit" class="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 shadow-lg transform hover:-translate-y-1">
+            <!-- Progress Status -->
+            <p id="status" class="text-center font-medium"></p>
+
+            <button type="submit" id="submitBtn" class="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 shadow-lg transform hover:-translate-y-1">
                 Soumettre les réponses
             </button>
         </form>
@@ -210,7 +214,7 @@
         </footer>
     </div>
 
-    <!-- Message Box -->
+    <!-- Success Modal -->
     <div id="messageBox" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
         <div class="bg-white p-8 rounded-xl max-w-sm w-full text-center">
             <div class="mb-4 text-green-500">
@@ -219,39 +223,73 @@
                 </svg>
             </div>
             <h3 class="text-xl font-bold mb-2">Merci !</h3>
-            <p class="text-gray-600 mb-6">Vos réponses ont été enregistrées avec succès.</p>
-            <button onclick="closeMessage()" class="bg-pink-600 text-white px-6 py-2 rounded-lg font-semibold">Fermer</button>
+            <p class="text-gray-600 mb-6">Vos réponses ont été envoyées avec succès à l'étudiant.</p>
+            <button onclick="closeMessage()" class="bg-pink-600 text-white px-6 py-2 rounded-lg font-semibold w-full">Fermer</button>
         </div>
     </div>
 
     <script>
+        // Toggle visibility of detail fields
         function toggleText(show, id) {
             const el = document.getElementById(id);
             if (show) {
                 el.classList.remove('hidden');
+                el.querySelector('input, textarea').required = true;
             } else {
                 el.classList.add('hidden');
+                el.querySelector('input, textarea').required = false;
             }
         }
 
-        document.getElementById('surveyForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Collect data logic
-            const formData = new FormData(this);
-            const data = {};
-            formData.forEach((value, key) => data[key] = value);
+        // Handle Formspree AJAX submission
+        const form = document.getElementById("surveyForm");
+        
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const status = document.getElementById("status");
+            const btn = document.getElementById("submitBtn");
+            const data = new FormData(event.target);
             
-            console.log('Form Data Collected:', data);
+            btn.disabled = true;
+            btn.innerText = "Envoi en cours...";
             
-            // Show custom message
-            document.getElementById('messageBox').classList.remove('hidden');
-            this.reset();
-            // Hide all details fields after reset
-            document.querySelectorAll('[id$="_details"]').forEach(el => el.classList.add('hidden'));
-        });
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    document.getElementById('messageBox').classList.remove('hidden');
+                    form.reset();
+                    document.querySelectorAll('[id$="_details"]').forEach(el => el.classList.add('hidden'));
+                    btn.disabled = false;
+                    btn.innerText = "Soumettre les réponses";
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                            status.classList.add("text-red-500");
+                        } else {
+                            status.innerHTML = "Oups! Il y a eu un problème lors de l'envoi.";
+                            status.classList.add("text-red-500");
+                        }
+                    })
+                }
+            }).catch(error => {
+                status.innerHTML = "Oups! Erreur de connexion.";
+                status.classList.add("text-red-500");
+                btn.disabled = false;
+                btn.innerText = "Soumettre les réponses";
+            });
+        }
+        
+        form.addEventListener("submit", handleSubmit);
 
         function closeMessage() {
             document.getElementById('messageBox').classList.add('hidden');
+            document.getElementById('status').innerText = "";
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
