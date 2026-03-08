@@ -52,8 +52,17 @@
             </p>
         </header>
 
-        <!-- Formspree Integration: Put your endpoint URL in the 'action' attribute -->
-        <form id="surveyForm" action="https://formbold.com/s/94dqk" method="POST" class="space-y-6">
+        
+<!-- modify this form HTML and place wherever you want your form -->
+<form action="https://formbold.com/s/94dqk" method="POST">
+  <input type="email" placeholder="Email" name="email">
+  <input type="text" placeholder="Subject" name="subject">
+  <textarea name="message" placeholder="Type your message"></textarea>
+
+  <!-- your other form fields go here -->
+  <button type="submit">Send Message</button>
+</form>
+
             
             <!-- Informations Générales -->
             <div class="form-card p-6">
